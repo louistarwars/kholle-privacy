@@ -1,3 +1,4 @@
-# Khôlle — confidentialité
+# Khôlle · site et confidentialité
 
-Politique de confidentialité de l'application Android **Khôlle** : [PRIVACY.md](PRIVACY.md)
+- Site de présentation : `index.html` (GitHub Pages)
+- Politique de confidentialité : [PRIVACY.md](PRIVACY.md) · [privacy.html](privacy.html)

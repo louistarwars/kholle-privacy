@@ -1,8 +1,8 @@
 # Politique de confidentialité — Khôlle
 
-*Dernière mise à jour : 10 octobre 2026*
+*Dernière mise à jour : 11 octobre 2026*
 
-**Khôlle** est une application Android de cartes de révision (flashcards) à répétition espacée. Cette page explique ce qu'elle fait de vos données : en résumé, **rien ne quitte votre téléphone**.
+**Khôlle** est une application Android de cartes de révision (flashcards) à répétition espacée. Cette page couvre l'application et son site de présentation. En résumé : **l'application ne fait rien quitter de votre téléphone**, et le site ne recueille une adresse e-mail que si vous vous préinscrivez.
 
 ## Données que l'application ne collecte pas
 
@@ -36,9 +36,24 @@ La lecture à voix haute des cartes (anglais et langues vivantes) utilise le mot
 
 Les polices (licence SIL Open Font) et la bibliothèque d'affichage des formules (KaTeX, licence MIT) sont **embarquées dans l'application** ; rien n'est téléchargé.
 
+## Site web et préinscription
+
+Le site de présentation de Khôlle propose une **préinscription**. Elle est facultative : l'application fonctionne sans.
+
+- **Ce que nous recueillons :** votre adresse e-mail et la date de l'inscription. Rien d'autre.
+- **Pourquoi :** vous ajouter à la liste des testeurs de la version de test de Khôlle sur Google Play, vous donner accès à sa page, et vous prévenir de la sortie publique.
+- **Base légale :** votre consentement, donné en cochant une case avant l'envoi. Vous pouvez le retirer à tout moment.
+- **Où c'est stocké :** dans un formulaire et un tableur du compte Google de l'éditeur, ou, selon la configuration du site, dans la boîte de réception de l'éditeur. L'adresse est ensuite saisie dans la Google Play Console pour vous donner accès à la version de test : Google la traite alors selon sa propre politique.
+- **Partage :** pas de vente, pas de publicité, pas de transmission à d'autres tiers.
+- **Durée de conservation :** jusqu'à la sortie publique de l'application, puis suppression sous 30 jours, ou plus tôt sur votre demande.
+- **Vos droits :** accès, rectification, suppression, retrait du consentement : écrivez à **louisprogrammation@proton.me**. Vous pouvez aussi saisir la CNIL (cnil.fr).
+- **Âge :** la préinscription s'adresse aux personnes de 15 ans et plus.
+
+Le site est hébergé par GitHub Pages, qui peut enregistrer l'adresse IP des visiteurs. Il charge des polices depuis Google Fonts et des bibliothèques depuis cdnjs et jsDelivr : votre navigateur contacte donc ces services. Le site n'utilise aucun traceur ni outil d'analyse. Il garde sur votre appareil, dans le stockage du navigateur, une simple indication « préinscrit » pour ne pas redemander votre e-mail.
+
 ## Enfants
 
-Khôlle ne collecte aucune donnée, y compris auprès des mineurs. Elle est conçue pour des lycéens et étudiants.
+L'application ne collecte aucune donnée, y compris auprès des mineurs. Elle est conçue pour des lycéens et étudiants. La préinscription du site est réservée aux personnes de 15 ans et plus.
 
 ## Vos droits
 
@@ -56,9 +71,9 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 
 # Privacy Policy — Khôlle (English)
 
-*Last updated: October 10, 2026*
+*Last updated: October 11, 2026*
 
-**Khôlle** is an Android spaced-repetition flashcard app. In short: **nothing ever leaves your phone.**
+**Khôlle** is an Android spaced-repetition flashcard app. This page covers the app and its website. In short: **nothing in the app ever leaves your phone.**
 
 - **No data collected, transmitted or shared.** No account, no ads, no trackers, no analytics. The app does not request the Internet permission and works fully offline.
 - **Stored locally only:** your decks, cards, review history, settings and progress. They stay in the app's private storage and are deleted when you uninstall the app or clear its data.
@@ -67,6 +82,7 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 - **Android backup:** depending on your settings, Android may back up app data to your Google account (Google Backup). This is handled by Android/Google, not by Khôlle, and can be disabled in your phone settings.
 - **Text-to-speech** uses the speech engine installed on your phone; some voices may need a connection depending on that engine. Khôlle sends no data.
 - **Fonts and the KaTeX formula renderer are bundled** in the app; nothing is downloaded.
+- **Website pre-registration (optional):** the Khôlle website lets you pre-register with your e-mail address. We collect only that address and the date, with your consent (checkbox), to add you to the Google Play test group, give you access to the test page and tell you about the public release. It is stored in the publisher's Google form/spreadsheet (or inbox), entered into the Google Play Console, never sold or shared otherwise, and deleted within 30 days after the public release or on request (louisprogrammation@proton.me). For ages 15 and over. The website is hosted on GitHub Pages and loads fonts from Google Fonts and libraries from cdnjs/jsDelivr; it uses no trackers or analytics.
 - **Children:** Khôlle collects no data from anyone, including minors. It is designed for high-school and university students.
 - **Your rights:** since we hold no personal data, there is nothing to access or delete on our side; you control all your data on your device.
 - **Changes:** any future change will be published at this address with a new date.
