@@ -1099,9 +1099,8 @@ function buildEnd(){
     gsap.to(lines,{yPercent:0,duration:1.1,stagger:.12,ease:'expo.out',overwrite:true});
     gsap.fromTo('#rain i',{y:'-40vh',rotation:function(){return gsap.utils.random(-60,60)}},{y:function(){return gsap.utils.random(110,190)+'vh'},rotation:function(){return gsap.utils.random(-260,260)},duration:function(){return gsap.utils.random(2.6,4.2)},ease:'power1.in',stagger:{each:.06,from:'random'},overwrite:true});
   }
-  var m=$('#mag');
-  m.addEventListener('click',function(e){e.preventDefault()});
-  if(fine){
+  var m=$('#go');
+  if(m&&fine){
     var qx=gsap.quickTo(m,'x',{duration:.5,ease:'power3'}),qy=gsap.quickTo(m,'y',{duration:.5,ease:'power3'});
     addEventListener('pointermove',function(e){
       var r=m.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),d=Math.hypot(dx,dy);
