@@ -1,6 +1,6 @@
 # Politique de confidentialité — Khôlle
 
-*Dernière mise à jour : 11 octobre 2026*
+*Dernière mise à jour : 12 octobre 2026*
 
 **Khôlle** est une application Android de cartes de révision (flashcards) à répétition espacée. Cette page couvre l'application et son site de présentation. En résumé : **l'application ne fait rien quitter de votre téléphone**, et le site ne recueille une adresse e-mail que si vous vous préinscrivez.
 
@@ -43,7 +43,7 @@ Le site de présentation de Khôlle propose une **préinscription**. Elle est fa
 - **Ce que nous recueillons :** votre adresse e-mail et la date de l'inscription. Rien d'autre.
 - **Pourquoi :** vous ajouter à la liste des testeurs de la version de test de Khôlle sur Google Play, vous donner accès à sa page, et vous prévenir de la sortie publique.
 - **Base légale :** votre consentement, donné en cochant une case avant l'envoi. Vous pouvez le retirer à tout moment.
-- **Où c'est stocké :** dans un formulaire et un tableur du compte Google de l'éditeur, ou, selon la configuration du site, dans la boîte de réception de l'éditeur. L'adresse est ensuite saisie dans la Google Play Console pour vous donner accès à la version de test : Google la traite alors selon sa propre politique.
+- **Où c'est stocké :** le formulaire utilise le service Web3Forms (web3forms.com), qui reçoit votre adresse et la transmet par e-mail à l'éditeur ; il peut en garder brièvement un historique d'envoi et la traite selon sa propre politique. L'éditeur la conserve dans sa boîte de réception, puis la saisit dans la Google Play Console pour vous donner accès à la version de test : Google la traite alors selon sa propre politique.
 - **Partage :** pas de vente, pas de publicité, pas de transmission à d'autres tiers.
 - **Durée de conservation :** jusqu'à la sortie publique de l'application, puis suppression sous 30 jours, ou plus tôt sur votre demande.
 - **Vos droits :** accès, rectification, suppression, retrait du consentement : écrivez à **louisprogrammation@proton.me**. Vous pouvez aussi saisir la CNIL (cnil.fr).
@@ -71,7 +71,7 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 
 # Privacy Policy — Khôlle (English)
 
-*Last updated: October 11, 2026*
+*Last updated: October 12, 2026*
 
 **Khôlle** is an Android spaced-repetition flashcard app. This page covers the app and its website. In short: **nothing in the app ever leaves your phone.**
 
@@ -82,7 +82,7 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 - **Android backup:** depending on your settings, Android may back up app data to your Google account (Google Backup). This is handled by Android/Google, not by Khôlle, and can be disabled in your phone settings.
 - **Text-to-speech** uses the speech engine installed on your phone; some voices may need a connection depending on that engine. Khôlle sends no data.
 - **Fonts and the KaTeX formula renderer are bundled** in the app; nothing is downloaded.
-- **Website pre-registration (optional):** the Khôlle website lets you pre-register with your e-mail address. We collect only that address and the date, with your consent (checkbox), to add you to the Google Play test group, give you access to the test page and tell you about the public release. It is stored in the publisher's Google form/spreadsheet (or inbox), entered into the Google Play Console, never sold or shared otherwise, and deleted within 30 days after the public release or on request (louisprogrammation@proton.me). For ages 15 and over. The website is hosted on GitHub Pages and loads fonts from Google Fonts and libraries from cdnjs/jsDelivr; it uses no trackers or analytics.
+- **Website pre-registration (optional):** the Khôlle website lets you pre-register with your e-mail address. We collect only that address and the date, with your consent (checkbox), to add you to the Google Play test group, give you access to the test page and tell you about the public release. It is received through the Web3Forms form service (web3forms.com), which forwards it by e-mail to the publisher, who keeps it in an inbox and enters it into the Google Play Console, never sold or shared otherwise, and deleted within 30 days after the public release or on request (louisprogrammation@proton.me). For ages 15 and over. The website is hosted on GitHub Pages and loads fonts from Google Fonts and libraries from cdnjs/jsDelivr; it uses no trackers or analytics.
 - **Children:** Khôlle collects no data from anyone, including minors. It is designed for high-school and university students.
 - **Your rights:** since we hold no personal data, there is nothing to access or delete on our side; you control all your data on your device.
 - **Changes:** any future change will be published at this address with a new date.
