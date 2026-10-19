@@ -1,0 +1,20 @@
+Définition de la continuité de $f$ en $a$ ?	$\forall\varepsilon>0,\ \exists\delta>0,\ \forall x\in I,\ |x-a|\le\delta\Rightarrow|f(x)-f(a)|\le\varepsilon$
+Théorème des valeurs intermédiaires ?	Si $f$ est continue sur un intervalle $I$ et $a,b\in I$, alors $f$ prend toute valeur comprise entre $f(a)$ et $f(b)$.
+Théorème des bornes atteintes ?	Une fonction continue sur un segment $[a,b]$ est bornée et atteint ses bornes.
+Théorème de Rolle ?	Si $f$ est continue sur $[a,b]$, dérivable sur $]a,b[$ et $f(a)=f(b)$, alors il existe $c\in]a,b[$ tel que $f'(c)=0$.
+Égalité des accroissements finis ?	Si $f$ est continue sur $[a,b]$ et dérivable sur $]a,b[$, il existe $c\in]a,b[$ tel que $f(b)-f(a)=f'(c)(b-a)$.
+Inégalité des accroissements finis ?	Si $f$ est dérivable sur un intervalle $I$ et $|f'|\le M$ sur $I$, alors $\forall x,y\in I,\ |f(x)-f(y)|\le M|x-y|$.
+Théorème de la bijection monotone ?	Si $f$ est continue et strictement monotone sur un intervalle $I$, alors $f$ réalise une bijection de $I$ sur l'intervalle $f(I)$, et sa réciproque est continue et de même monotonie.
+Formule de Taylor-Young à l'ordre $n$ ?	Si $f$ est $n$ fois dérivable en $a$ : $f(a+h)=\displaystyle\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}h^k+o(h^n)$ quand $h\to0$.
+Développement limité de $e^x$ en $0$ ?	$e^x=\displaystyle\sum_{k=0}^{n}\frac{x^k}{k!}+o(x^n)$
+Développement limité de $\sin x$ en $0$ ?	$\sin x=\displaystyle\sum_{k=0}^{n}\frac{(-1)^k x^{2k+1}}{(2k+1)!}+o(x^{2n+1})$
+Développement limité de $\cos x$ en $0$ ?	$\cos x=\displaystyle\sum_{k=0}^{n}\frac{(-1)^k x^{2k}}{(2k)!}+o(x^{2n})$
+Développement limité de $\dfrac{1}{1-x}$ en $0$ ?	$\dfrac{1}{1-x}=\displaystyle\sum_{k=0}^{n}x^k+o(x^n)$
+Développement limité de $\ln(1+x)$ en $0$ ?	$\ln(1+x)=\displaystyle\sum_{k=1}^{n}\frac{(-1)^{k+1}x^k}{k}+o(x^n)$
+Développement limité de $(1+x)^\alpha$ en $0$ ?	$(1+x)^\alpha=\displaystyle\sum_{k=0}^{n}\binom{\alpha}{k}x^k+o(x^n)$ avec $\binom{\alpha}{k}=\dfrac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!}$
+Suite de Cauchy : définition ?	$\forall\varepsilon>0,\ \exists N,\ \forall p,q\ge N,\ |u_p-u_q|\le\varepsilon$
+Théorème de convergence monotone (suites) ?	Une suite croissante et majorée converge (vers sa borne supérieure). Une suite croissante non majorée tend vers $+\infty$.
+Théorème de Bolzano-Weierstrass ?	De toute suite réelle bornée, on peut extraire une sous-suite convergente.
+Règle de d'Alembert ?	Si $u_n>0$ et $\dfrac{u_{n+1}}{u_n}\to\ell$ : si $\ell<1$, $\sum u_n$ converge ; si $\ell>1$, elle diverge grossièrement.
+Séries de Riemann ?	$\sum\dfrac{1}{n^\alpha}$ converge si et seulement si $\alpha>1$.
+Convergence uniforme de $(f_n)$ vers $f$ sur $I$ : définition ?	$\sup_{x\in I}|f_n(x)-f(x)|\xrightarrow[n\to\infty]{}0$, c'est-à-dire $\forall\varepsilon>0,\ \exists N,\ \forall n\ge N,\ \forall x\in I,\ |f_n(x)-f(x)|\le\varepsilon$.

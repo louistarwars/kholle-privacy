@@ -627,6 +627,7 @@ footer a{opacity:.85}
   </div>
   <small class="feat lbl">Gratuit · Sans publicité · Hors ligne</small>
   <footer>
+    <a href="bibliotheque.html" data-hover>Bibliothèque de paquets</a>
     <a href="privacy.html" target="_blank" rel="noopener" data-hover>Politique de confidentialité</a>
     <span>louisprogrammation@proton.me</span>
     <span class="lg">Android · Les écrans de cette page sont recréés à partir de l'appli.</span>
@@ -647,6 +648,7 @@ var root=document.documentElement;
 var hasLibs=!!(window.gsap&&window.ScrollTrigger);
 var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var motion=hasLibs&&!rm;
+var CAP=/[?&]cap=1/.test(location.search);
 if(motion)root.classList.add('js');
 if(rm)root.classList.add('rm');
 var $=function(s,r){return (r||document).querySelector(s)};
@@ -905,7 +907,7 @@ $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
 /* ───── scènes ───── */
 var pinned=[];
 function pin(trigger,end,build,opts){
-  var tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:Object.assign({trigger:trigger,start:'top top',end:end,pin:true,scrub:opts&&opts.scrub!==undefined?opts.scrub:.6,anticipatePin:1,invalidateOnRefresh:true},opts&&opts.st||{})});
+  var tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:Object.assign({trigger:trigger,start:'top top',end:end,pin:true,scrub:CAP?true:(opts&&opts.scrub!==undefined?opts.scrub:.6),anticipatePin:1,invalidateOnRefresh:true},opts&&opts.st||{})});
   build(tl);pinned.push(trigger);return tl;
 }
 
@@ -1132,7 +1134,8 @@ addEventListener('load',function(){ST.refresh()});
 var loader=$('#loader'),ln=$('#ln'),stack=$$('#loader .stack i'),lock=document.body;
 lock.classList.add('lock');
 var cnt={v:0};
-var lt=gsap.timeline({onComplete:function(){lock.classList.remove('lock');startLenis();ST.refresh();}});
+if(CAP){loader.style.display='none';lock.classList.remove('lock');intro.progress(1);ST.refresh();}
+var lt=CAP?gsap.timeline():gsap.timeline({onComplete:function(){lock.classList.remove('lock');startLenis();ST.refresh();}});
 lt.to(stack,{rotation:function(i){return (i-2)*16},x:function(i){return (i-2)*34},y:function(i){return -Math.abs(i-2)*10},duration:1.1,ease:'power3.inOut',stagger:.04},0)
   .to(cnt,{v:100,duration:1.2,ease:'power2.inOut',onUpdate:function(){ln.textContent=Math.round(cnt.v)}},0)
   .to(stack,{y:'-120vh',rotation:function(i){return (i-2)*30},duration:.55,ease:'power3.in',stagger:.04},1.25)

@@ -1,0 +1,17 @@
+Sous-espace vectoriel de $E$ : définition ?	Partie $F$ de $E$ contenant $0_E$ et stable par combinaison linéaire : $\forall(x,y)\in F^2,\ \forall\lambda\in\mathbb K,\ \lambda x+y\in F$.
+Noyau d'une application linéaire $u:E\to F$ ?	$\operatorname{Ker}u=\{x\in E\mid u(x)=0_F\}$, sous-espace vectoriel de $E$.
+Image d'une application linéaire $u:E\to F$ ?	$\operatorname{Im}u=\{u(x)\mid x\in E\}$, sous-espace vectoriel de $F$.
+Caractérisation de l'injectivité d'une application linéaire ?	$u$ est injective $\iff\operatorname{Ker}u=\{0_E\}$.
+Théorème du rang ?	Si $E$ est de dimension finie : $\dim E=\dim\operatorname{Ker}u+\operatorname{rg}u$, où $\operatorname{rg}u=\dim\operatorname{Im}u$.
+Formule de Grassmann ?	Pour $F,G$ sous-espaces de dimension finie : $\dim(F+G)=\dim F+\dim G-\dim(F\cap G)$.
+Quand dit-on que $F$ et $G$ sont supplémentaires dans $E$ ?	Quand $E=F+G$ et $F\cap G=\{0_E\}$. Tout vecteur $x$ de $E$ s'écrit alors de façon unique $x=f+g$ avec $f\in F$ et $g\in G$.
+Base d'un espace vectoriel : définition ?	Une famille à la fois libre et génératrice.
+Endomorphisme en dimension finie : bijectif, injectif, surjectif ?	Pour $u\in\mathcal L(E)$ avec $E$ de dimension finie : $u$ bijectif $\iff u$ injectif $\iff u$ surjectif.
+Polynôme caractéristique d'une matrice $A\in\mathcal M_n(\mathbb K)$ ?	$\chi_A(X)=\det(XI_n-A)$
+Valeur propre d'un endomorphisme $u$ : définition ?	$\lambda$ est valeur propre de $u$ s'il existe $x\ne0$ tel que $u(x)=\lambda x$, c'est-à-dire $\operatorname{Ker}(u-\lambda\,\mathrm{id})\ne\{0\}$.
+Critère de diagonalisabilité ?	$u$ est diagonalisable $\iff\chi_u$ est scindé et, pour chaque valeur propre, la dimension du sous-espace propre est égale à sa multiplicité.
+Théorème de Cayley-Hamilton ?	$\chi_A(A)=0$.
+Que vaut $\operatorname{tr}(AB)$ ?	$\operatorname{tr}(AB)=\operatorname{tr}(BA)$.
+Déterminant d'un produit ; inversibilité ?	$\det(AB)=\det A\cdot\det B$, et $A$ est inversible $\iff\det A\ne0$.
+Théorème spectral (matrices symétriques réelles) ?	Toute matrice symétrique réelle est diagonalisable dans une base orthonormée : $A=PDP^{\mathsf T}$ avec $P$ orthogonale et $D$ diagonale.
+Inégalité de Cauchy-Schwarz ?	$|\langle x,y\rangle|\le\|x\|\,\|y\|$, avec égalité si et seulement si $x$ et $y$ sont colinéaires.

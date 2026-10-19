@@ -1,0 +1,28 @@
+[
+ {
+  "id": "analyse-bases",
+  "title": "Analyse : les bases",
+  "subject": "maths",
+  "level": "Prépa scientifique, 1re année",
+  "author": "Khôlle",
+  "cards": 20,
+  "file": "packs/analyse-bases.tsv",
+  "license": "CC BY-NC 4.0",
+  "date": "2026-10-19",
+  "description": "Continuité, dérivation, développements limités, suites, séries, convergence uniforme. Paquet d'exemple : relis-le avec ton cours.",
+  "example": true
+ },
+ {
+  "id": "algebre-lineaire-bases",
+  "title": "Algèbre linéaire : les bases",
+  "subject": "maths",
+  "level": "Prépa scientifique, 1re et 2e année",
+  "author": "Khôlle",
+  "cards": 17,
+  "file": "packs/algebre-lineaire-bases.tsv",
+  "license": "CC BY-NC 4.0",
+  "date": "2026-10-19",
+  "description": "Sous-espaces, applications linéaires, rang, réduction, déterminant, espaces euclidiens. Paquet d'exemple : relis-le avec ton cours.",
+  "example": true
+ }
+]
