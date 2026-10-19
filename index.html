@@ -52,7 +52,12 @@ nav>*{pointer-events:auto}
 .logo i::after{transform:rotate(6deg)}
 .logo:hover i::before{transform:rotate(-34deg) translateX(-.2rem)}
 .logo:hover i::after{transform:rotate(18deg) translateX(.2rem)}
-.pill{font:600 .78rem/1 var(--body);padding:.7rem 1rem;border:1.5px solid currentColor;border-radius:99px;letter-spacing:.02em}
+.navr{display:flex;gap:.5rem;align-items:center}
+.pill.lib{display:inline-flex;align-items:center;gap:.45rem}
+.pill .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 1.5px var(--ink);display:block;animation:pd 1.8s ease-in-out infinite}
+@keyframes pd{50%{transform:scale(1.5)}}
+@media (max-width:480px){.navr{gap:.35rem}.pill{font-size:.7rem;padding:.6rem .75rem}.logo{font-size:1.05rem}}
+.pill{text-decoration:none;font:600 .78rem/1 var(--body);padding:.7rem 1rem;border:1.5px solid currentColor;border-radius:99px;letter-spacing:.02em}
 #chap{position:fixed;left:var(--gut);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:80;color:var(--nav);transition:color .35s;display:flex;gap:.8rem;align-items:baseline;pointer-events:none}
 #chap b{font:800 1.6rem/1 var(--disp);font-variant-numeric:tabular-nums}
 #chap span{white-space:nowrap}
@@ -93,6 +98,7 @@ html:not(.js) .fan,html:not(.js) #chap{display:none}
 .cta{display:inline-flex;align-items:center;gap:.7rem;padding:1.1rem 1.7rem;border-radius:99px;background:var(--ink);color:#fff;font:700 1rem/1 var(--body);text-decoration:none;border:0;position:relative;will-change:transform}
 .cta svg{width:1.25em;height:1.25em;fill:currentColor}
 .cta.w{background:#fff;color:var(--ink)}
+.cta.o{background:transparent;color:inherit;box-shadow:0 0 0 2.5px currentColor inset}
 .scroll{position:absolute;left:50%;bottom:calc(58px + env(safe-area-inset-bottom,0px));z-index:3;width:1.5px;height:44px;background:rgba(255,255,255,.35);transform:translateX(-50%);overflow:hidden}
 .scroll::after{content:"";position:absolute;inset:0;background:#fff;animation:sc 1.8s cubic-bezier(.7,0,.3,1) infinite}
 @keyframes sc{0%{transform:translateY(-100%)}60%,100%{transform:translateY(100%)}}
@@ -398,6 +404,22 @@ html:not(.js) .panel{width:auto;height:auto;min-height:100svh}
 .net .x{stroke:#C8321F;stroke-width:4;stroke-linecap:round}
 @media (max-width:640px){.seal{top:180px;width:72px}.zeros{grid-template-columns:1fr;gap:1rem}.zeros div{grid-template-columns:auto 1fr;align-items:end;gap:1rem}.zeros b{font-size:clamp(5rem,30vw,9rem)}}
 
+/* ───────── 9b. bibliothèque ───────── */
+#lib{background:var(--yellow);color:var(--ink);min-height:100svh;display:grid;align-items:center;padding-block:110px 100px}
+.libgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,5rem);align-items:center;width:100%;max-width:1300px;margin:0 auto}
+.libtxt{display:grid;gap:1.3rem;justify-items:start}
+#lib h2{font-size:clamp(2.4rem,6.6vw,6rem);max-width:11ch}
+.libp{font:400 clamp(1.05rem,1.7vw,1.4rem)/1.4 var(--body);max-width:34ch}
+.libcta{display:flex;gap:.8rem;flex-wrap:wrap}
+#lib .cta.o{color:var(--ink)}
+.libstack{display:grid;gap:1rem;position:relative;padding:1rem 0}
+.lp{background:#fff;border:2.5px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 var(--ink);display:grid;gap:.4rem;padding:0 0 1rem;overflow:hidden;will-change:transform}
+.lp .lt{display:flex;justify-content:space-between;gap:1rem;color:#fff;padding:.6rem 1rem;font:500 .7rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.lp .lt em{font-style:normal;opacity:.85}
+.lp b{font:800 1.5rem/1.05 var(--disp);letter-spacing:-.02em;padding:.5rem 1rem 0}
+.lp span:last-child{padding:0 1rem;color:#55587a;font-size:.95rem}
+.lp1{transform:rotate(-2deg)}.lp2{transform:rotate(1.5deg) translateX(3%)}.lp3{transform:rotate(-1deg) translateX(-2%);border-style:dashed;box-shadow:none}
+@media (max-width:820px){.libgrid{grid-template-columns:1fr}#lib{padding-block:96px 90px}}
 /* ───────── 10. final ───────── */
 #end{background:var(--vm);color:#fff;min-height:100svh;display:grid;align-content:center;justify-items:start;gap:2rem;padding-block:110px 130px}
 #end h2{font-size:clamp(2.8rem,10.6vw,10.5rem);line-height:.86;max-width:11ch}
@@ -445,7 +467,7 @@ footer a{opacity:.85}
 </div>
 <nav>
   <a class="logo" href="#hero" data-hover><i></i>Khôlle</a>
-  <a class="pill" href="#end" data-hover>Se préinscrire</a>
+  <div class="navr"><a class="pill lib" href="bibliotheque.html" data-hover><i class="dot"></i>Bibliothèque</a><a class="pill" href="#end" data-hover>Se préinscrire</a></div>
 </nav>
 <div id="chap"><b id="cn">01</b><span class="lbl" id="ct">Accueil</span></div>
 
@@ -466,6 +488,7 @@ footer a{opacity:.85}
     <p>Retiens tout. Oublie moins.</p>
     <p class="sub">Des flashcards à répétition espacée, faites pour la prépa.</p>
     <a class="cta w" href="#end" data-hover><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.4c-.3.2-.5.6-.5 1.1v17c0 .5.2.9.5 1.1l9.6-9.6L3.6 2.4zm10.4 8.6 2.6-2.6L5.4 2l8.6 9zm0 2 .1.1-8.7 9 11.2-6.4L14 13zm5.1-1.4-2.4-1.4-2.7 2.8 2.7 2.8 2.5-1.4c.7-.4.7-1.4-.1-1.8z"/></svg>Se préinscrire sur Android</a>
+    <a class="cta o" href="bibliotheque.html" data-hover>Bibliothèque de paquets</a>
   </div>
   <div class="scroll" aria-hidden="true"></div>
   <div class="wipe" aria-hidden="true"></div>
@@ -602,6 +625,27 @@ footer a{opacity:.85}
     <div><b class="z">0</b><span>donnée collectée</span></div>
   </div>
   <p class="net"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="w" d="M6 18c10-9 26-9 36 0M12 26c7-6 17-6 24 0M18 34c4-3 8-3 12 0"/><circle cx="24" cy="40" r="2.4" fill="#1B1B1B"/><path class="x" id="xline" d="M6 6 42 42"/></svg>L'appli n'a même pas la permission d'accéder à Internet. Elle marche en mode avion, partout.</p>
+</section>
+
+<!-- 9b · BIBLIOTHÈQUE -->
+<section id="lib" class="scene" data-chap="Bibliothèque" data-nav="d">
+  <div class="libgrid">
+    <div class="libtxt">
+      <p class="lbl">Nouveau sur le site</p>
+      <h2>Des fiches déjà faites par d'autres élèves.</h2>
+      <p class="libp">Télécharge des paquets et importe-les dans Khôlle en quelques secondes. Ou partage les tiens avec les autres. C'est gratuit.</p>
+      <div class="libcta">
+        <a class="cta" href="bibliotheque.html" data-hover>Ouvrir la bibliothèque</a>
+        <a class="cta o" href="bibliotheque.html#partager" data-hover>Partager mon paquet</a>
+      </div>
+      <small class="lbl">Chaque paquet est relu · droits d'auteur respectés</small>
+    </div>
+    <div class="libstack" aria-hidden="true">
+      <div class="lp lp1"><span class="lt" style="background:#4F7CFF">Maths<em>20 cartes</em></span><b>Analyse : les bases</b><span>Continuité, dérivation, développements limités, suites, séries.</span></div>
+      <div class="lp lp2"><span class="lt" style="background:#4F7CFF">Maths<em>17 cartes</em></span><b>Algèbre linéaire : les bases</b><span>Sous-espaces, rang, réduction, déterminant, espaces euclidiens.</span></div>
+      <div class="lp lp3"><span class="lt" style="background:#14162B">Le tien<em>bientôt ici</em></span><b>Ton paquet</b><span>Envoie tes cartes : elles seront relues puis publiées avec ton pseudo.</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- 10 · FINAL -->
@@ -1111,6 +1155,16 @@ function buildEnd(){
   }
 }
 
+/* 9b · bibliothèque */
+function buildLib(){
+  var cards=$$('.lp');
+  gsap.set(cards,{y:90,opacity:0,rotation:function(i){return (i-1)*7}});
+  ST.create({trigger:'#lib',start:'top 70%',once:true,onEnter:function(){
+    gsap.to(cards,{y:0,opacity:1,rotation:function(i){return [-2,1.5,-1][i]},duration:1,stagger:.15,ease:'back.out(1.5)'});
+  }});
+  gsap.from('#lib .libtxt > *',{y:40,opacity:0,duration:.9,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:'#lib',start:'top 70%',once:true}});
+}
+
 /* chapitres */
 function buildChapters(){
   var cn=$('#cn'),ct=$('#ct');
@@ -1125,7 +1179,7 @@ function buildChapters(){
 }
 
 /* ───── lancement ───── */
-var intro=buildHero();buildIdea();buildCard();buildCurve();buildNotif();buildDesigns();buildMaths();buildGame();buildOff();buildEnd();buildChapters();
+var intro=buildHero();buildIdea();buildCard();buildCurve();buildNotif();buildDesigns();buildMaths();buildGame();buildOff();buildLib();buildEnd();buildChapters();
 ST.refresh();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ST.refresh()});
 addEventListener('load',function(){ST.refresh()});
