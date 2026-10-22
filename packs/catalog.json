@@ -1,5 +1,17 @@
 [
  {
+  "id": "equations-differentielles-physique",
+  "title": "Équations différentielles en physique",
+  "subject": "physique",
+  "level": "MP",
+  "author": "Louis",
+  "cards": 5,
+  "file": "packs/equations-differentielles-physique.tsv",
+  "license": "CC BY-NC 4.0",
+  "date": "2026-10-22",
+  "description": "Méthode générale, solutions homogènes, régimes de l'oscillateur amorti, solution particulière, équations non linéaires."
+ },
+ {
   "id": "analyse-bases",
   "title": "Analyse : les bases",
   "subject": "maths",

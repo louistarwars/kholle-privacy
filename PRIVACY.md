@@ -1,6 +1,6 @@
 # Politique de confidentialité — Khôlle
 
-*Dernière mise à jour : 20 octobre 2026*
+*Dernière mise à jour : 22 octobre 2026*
 
 **Khôlle** est une application Android de cartes de révision (flashcards) à répétition espacée. Cette page couvre l'application et son site de présentation. En résumé : **l'application ne fait rien quitter de votre téléphone**, et le site ne recueille une adresse e-mail que si vous vous préinscrivez.
 
@@ -59,7 +59,7 @@ Les personnes qui testent Khôlle en avant-première peuvent répondre à un cou
 
 Le site propose une **bibliothèque de paquets de flashcards** : on peut en télécharger, et en proposer.
 
-- **Télécharger** ne demande aucune information.
+- **Télécharger** ne demande aucune information. Le site compte seulement le nombre de téléchargements de chaque paquet : il ajoute 1 au compteur et garde, **24 heures au plus**, une empreinte anonyme et irréversible (calculée à partir de l'adresse IP, du paquet et de la date) pour ne pas compter deux fois la même personne. Le compteur est stocké dans une base fournie par Upstash, via Vercel.
 - **Proposer un paquet** : le formulaire recueille le contenu du paquet, son titre, sa matière et sa filière, le nom affiché (ou « Anonyme ») et **votre adresse e-mail**, avec trois cases de consentement (droits d'auteur, publication, confidentialité).
 - **Pourquoi :** relire le paquet, le publier s'il est conforme, vous contacter à son sujet et traiter une éventuelle demande de retrait.
 - **Ce qui est publié :** le paquet, son titre, sa matière, sa filière et le nom affiché, sous licence Creative Commons BY-NC 4.0. **Votre e-mail n'est jamais publié.**
@@ -87,7 +87,7 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 
 # Privacy Policy — Khôlle (English)
 
-*Last updated: October 20, 2026*
+*Last updated: October 22, 2026*
 
 **Khôlle** is an Android spaced-repetition flashcard app. This page covers the app and its website. In short: **nothing in the app ever leaves your phone.**
 
@@ -100,7 +100,7 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 - **Fonts and the KaTeX formula renderer are bundled** in the app; nothing is downloaded.
 - **Website pre-registration (optional):** the Khôlle website lets you pre-register with your e-mail address. We collect only that address and the date, with your consent (checkbox), to add you to the Google Play test group, give you access to the test page and tell you about the public release. It is received through the Web3Forms form service (web3forms.com), which forwards it by e-mail to the publisher, who keeps it in an inbox and enters it into the Google Play Console, never sold or shared otherwise, and deleted within 30 days after the public release or on request (louisprogrammation@proton.me). For ages 15 and over. The website is hosted on Vercel and loads fonts from Google Fonts and libraries from cdnjs/jsDelivr; it uses no trackers or analytics.
 - **Early-tester questionnaire (optional):** testers can answer a short form about a Discord server, moderation, sharing packs and spreading the word. It collects their choices, e-mail address, an optional name and message, with their consent. Used only to organize the Discord and contact them; received through Web3Forms; deleted within 30 days after the public release, or earlier on request.
-- **Pack library (optional):** the website lets you download flashcard packs, and submit your own. A submission collects the pack, its title, subject, track, a display name and your e-mail address (never published), with consent checkboxes (copyright, publication, privacy). It is received through Web3Forms, reviewed, and published under CC BY-NC 4.0 if compliant. E-mails and unpublished packs are deleted within 30 days of the decision. Only submit content you wrote or have the right to share; to report content or request removal, write to louisprogrammation@proton.me.
+- **Pack library (optional):** the website lets you download flashcard packs, and submit your own. Downloads are counted per pack (a counter, plus an anonymous irreversible fingerprint derived from the IP address, kept for 24 hours at most, to avoid counting the same person twice; stored in an Upstash database via Vercel). A submission collects the pack, its title, subject, track, a display name and your e-mail address (never published), with consent checkboxes (copyright, publication, privacy). It is received through Web3Forms, reviewed, and published under CC BY-NC 4.0 if compliant. E-mails and unpublished packs are deleted within 30 days of the decision. Only submit content you wrote or have the right to share; to report content or request removal, write to louisprogrammation@proton.me.
 - **Children:** Khôlle collects no data from anyone, including minors. It is designed for high-school and university students.
 - **Your rights:** since we hold no personal data, there is nothing to access or delete on our side; you control all your data on your device.
 - **Changes:** any future change will be published at this address with a new date.

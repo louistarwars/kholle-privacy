@@ -225,7 +225,7 @@ html:not(.js) .rv{opacity:1;transform:none}
 var KEY='3afd0708-3ac0-443b-b708-7fafbad8ed29';
 var $=function(s){return document.querySelector(s)};
 var SUBJ={maths:['Maths','#4F7CFF'],physique:['Physique','#8B5CF6'],chimie:['Chimie','#14B8A6'],si:['SI','#F97316'],info:['Informatique','#6366F1'],anglais:['Anglais','#EF4444'],lv2:['LV2','#EC4899'],francais:['Français-Philo','#F59E0B'],histoire:['Histoire-Géo','#A16207'],bio:['SVT / Bio','#22C55E'],eco:['Éco / ESH','#0EA5E9'],autre:['Autre','#64748B']};
-var packs=[],filter='all';
+var packs=[],filter='all',stats={};
 
 /* lecture simple d'un fichier de cartes (même logique que l'appli) */
 function parse(text){
@@ -265,12 +265,20 @@ function renderGrid(){
   list.forEach(function(p){
     var s=SUBJ[p.subject]||SUBJ.autre,el=document.createElement('article');el.className='pack rv';
     el.innerHTML='<div class="top" style="background:'+s[1]+'"><span>'+esc(s[0])+'</span><span>'+p.cards+' cartes</span></div>'+
-      '<div class="body"><h3>'+esc(p.title)+'</h3><p class="meta">'+esc(p.level)+' · par '+esc(p.author)+'</p><p class="desc">'+esc(p.description)+'</p>'+(p.example?'<span class="ex">Paquet d\'exemple</span>':'')+'</div>'+
+      '<div class="body"><h3>'+esc(p.title)+'</h3><p class="meta">'+esc(p.level)+' · par '+esc(p.author)+dlText(p)+'</p><p class="desc">'+esc(p.description)+'</p>'+(p.example?'<span class="ex">Paquet d\'exemple</span>':'')+'</div>'+
       '<div class="acts"><a class="btn" href="'+esc(p.file)+'" download="Kholle-'+esc(p.id)+'.tsv">Télécharger</a><button class="btn o" type="button" data-id="'+esc(p.id)+'">Aperçu</button></div>';
     g.appendChild(el);
+    el.querySelector('a[download]').addEventListener('click',function(){
+      try{navigator.sendBeacon('api/count?id='+encodeURIComponent(p.id))}catch(e){}
+    });
     el.querySelector('button').addEventListener('click',function(ev){togglePreview(p,el,ev.currentTarget)});
   });
   reveal();
+}
+function dlText(p){
+  var n=stats[p.id];
+  if(typeof n!=='number')return '';
+  return ' · <b>'+n+' téléchargement'+(n>1?'s':'')+'</b>';
 }
 function togglePreview(p,el,btn){
   var old=el.querySelector('.prev');
@@ -286,6 +294,10 @@ fetch('packs/catalog.json').then(function(r){if(!r.ok)throw 0;return r.json()}).
   packs=c;renderTools();renderGrid();
 }).catch(function(){$('#empty').hidden=false;$('#empty').textContent='Le catalogue est momentanément indisponible.'});
 $('#q').addEventListener('input',renderGrid);
+/* compteur de téléchargements (facultatif : absent si la base n'est pas configurée) */
+fetch('api/stats').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
+  if(s&&typeof s==='object'&&Object.keys(s).length){stats=s;renderGrid()}
+}).catch(function(){});
 
 /* apparition douce */
 function reveal(){
