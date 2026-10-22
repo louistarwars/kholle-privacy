@@ -16,6 +16,18 @@ exports.cmd = async (command) => {
   return j.result;
 };
 
+// Plusieurs commandes en une seule requête.
+exports.pipeline = async (commands) => {
+  const r = await fetch(URL_ + '/pipeline', {
+    method: 'POST',
+    headers: { Authorization: 'Bearer ' + TOKEN, 'Content-Type': 'application/json' },
+    body: JSON.stringify(commands),
+  });
+  if (!r.ok) throw new Error('store ' + r.status);
+  const j = await r.json();
+  return j.map((x) => x.result);
+};
+
 // Identifiants de paquets valides : ceux du catalogue publié avec le site.
 exports.catalogIds = async (req) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host;
