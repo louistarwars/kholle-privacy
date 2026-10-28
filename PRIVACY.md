@@ -1,6 +1,6 @@
 # Politique de confidentialité — Khôlle
 
-*Dernière mise à jour : 23 octobre 2026*
+*Dernière mise à jour : 28 octobre 2026*
 
 **Khôlle** est une application Android de cartes de révision (flashcards) à répétition espacée. Cette page couvre l'application et son site de présentation. En résumé : **l'application ne fait rien quitter de votre téléphone**, et le site ne recueille une adresse e-mail que si vous vous préinscrivez.
 
@@ -38,7 +38,7 @@ Les polices (licence SIL Open Font) et la bibliothèque d'affichage des formules
 
 ## Site web et préinscription
 
-Le site de présentation de Khôlle propose une **préinscription**. Elle est facultative : l'application fonctionne sans.
+Avant la sortie de l'application, le site de présentation de Khôlle proposait une **préinscription** (fermée depuis la sortie sur Google Play). Elle était facultative : l'application fonctionne sans.
 
 - **Ce que nous recueillons :** votre adresse e-mail et la date de l'inscription. Rien d'autre.
 - **Pourquoi :** vous ajouter à la liste des testeurs de la version de test de Khôlle sur Google Play, vous donner accès à sa page, et vous prévenir de la sortie publique.
@@ -91,7 +91,7 @@ Une question sur cette politique : **louisprogrammation@proton.me**
 
 # Privacy Policy — Khôlle (English)
 
-*Last updated: October 23, 2026*
+*Last updated: October 28, 2026*
 
 **Khôlle** is an Android spaced-repetition flashcard app. This page covers the app and its website. In short: **nothing in the app ever leaves your phone.**
 

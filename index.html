@@ -5,7 +5,7 @@
 <meta name="description" content="Khôlle : flashcards à répétition espacée pour la prépa. Maths en LaTeX, questions surprises en notification, treize designs, 100 % hors ligne.">
 <meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Khôlle · flashcards pour la prépa">
-<meta property="og:description" content="Retiens tout. Oublie moins. Préinscris-toi pour tester Khôlle sur Android avant tout le monde.">
+<meta property="og:description" content="Retiens tout. Oublie moins. Disponible gratuitement sur Google Play.">
 <meta property="og:url" content="https://kholleapp.vercel.app/"><meta property="og:image" content="https://kholleapp.vercel.app/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -467,7 +467,7 @@ footer a{opacity:.85}
 </div>
 <nav>
   <a class="logo" href="#hero" data-hover><i></i>Khôlle</a>
-  <div class="navr"><a class="pill lib" href="bibliotheque.html" data-hover><i class="dot"></i>Bibliothèque</a><a class="pill" href="#end" data-hover>Se préinscrire</a></div>
+  <div class="navr"><a class="pill lib" href="bibliotheque.html" data-hover><i class="dot"></i>Bibliothèque</a><a class="pill" href="https://play.google.com/store/apps/details?id=fr.kholle.app" target="_blank" rel="noopener" data-hover>Télécharger</a></div>
 </nav>
 <div id="chap"><b id="cn">01</b><span class="lbl" id="ct">Accueil</span></div>
 
@@ -487,7 +487,7 @@ footer a{opacity:.85}
   <div class="herotxt">
     <p>Retiens tout. Oublie moins.</p>
     <p class="sub">Des flashcards à répétition espacée, faites pour la prépa.</p>
-    <a class="cta w" href="#end" data-hover><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.4c-.3.2-.5.6-.5 1.1v17c0 .5.2.9.5 1.1l9.6-9.6L3.6 2.4zm10.4 8.6 2.6-2.6L5.4 2l8.6 9zm0 2 .1.1-8.7 9 11.2-6.4L14 13zm5.1-1.4-2.4-1.4-2.7 2.8 2.7 2.8 2.5-1.4c.7-.4.7-1.4-.1-1.8z"/></svg>Se préinscrire sur Android</a>
+    <a class="cta w" href="https://play.google.com/store/apps/details?id=fr.kholle.app" target="_blank" rel="noopener" data-hover>Télécharger sur Google Play</a>
     <a class="cta o" href="bibliotheque.html" data-hover>Bibliothèque de paquets</a>
   </div>
   <div class="scroll" aria-hidden="true"></div>
@@ -652,22 +652,9 @@ footer a{opacity:.85}
 <section id="end" class="scene" data-nav="l" data-chap="À toi">
   <div class="rain" id="rain" aria-hidden="true"></div>
   <h2><span><b>Ta prochaine</b></span><span><b>khôlle</b></span><span><b>commence ici.</b></span></h2>
-  <form id="pre" class="pre" novalidate>
-    <label class="lbl" for="em">Préinscription · Android</label>
-    <p class="prep">Entre l'adresse e-mail de ton compte Google. On t'ajoute à la liste des premiers testeurs : tu accèdes à la page Google Play avant tout le monde.</p>
-    <div class="prerow">
-      <input id="em" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="toi@gmail.com" required aria-describedby="msg">
-      <button class="cta" type="submit" id="go" data-hover>Me préinscrire</button>
-    </div>
-    <input class="hp" type="text" id="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <label class="chk"><input type="checkbox" id="cs" required><span>J'accepte que mon e-mail serve à m'ajouter aux testeurs sur Google Play et à me prévenir de la sortie. Je peux demander sa suppression à tout moment. <a href="privacy.html" target="_blank" rel="noopener">Politique de confidentialité</a></span></label>
-    <p class="msg" id="msg" role="status" aria-live="polite"></p>
-  </form>
-  <div class="okbox" id="okbox" hidden>
-    <b>C'est noté.</b>
-    <p>On t'ajoute à la liste des testeurs sous 48 heures. Ensuite, ce lien t'ouvre la page Khôlle sur Google Play, réservée aux préinscrits :</p>
-    <a class="cta w" id="optin" href="#" target="_blank" rel="noopener" data-hover>Ouvrir la page Google Play</a>
-    <small id="nooptin">Le lien arrive très bientôt. Garde cet onglet ou repasse sur le site.</small>
+  <div class="pre">
+    <p class="prep">Khôlle est disponible sur Android, gratuit, sans publicité et hors ligne. Installe-la depuis Google Play et commence à réviser ce soir.</p>
+    <div class="prerow"><a class="cta" id="go" href="https://play.google.com/store/apps/details?id=fr.kholle.app" target="_blank" rel="noopener" data-hover>Télécharger sur Google Play</a><a class="cta o" href="bibliotheque.html" data-hover>Bibliothèque de paquets</a></div>
   </div>
   <small class="feat lbl">Gratuit · Sans publicité · Hors ligne</small>
   <footer>
