@@ -42,6 +42,7 @@ td{padding:7px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:ri
     <p class="msg" id="msg" role="status"></p>
   </form>
   <div id="app" hidden>
+    <div class="card"><h2>Application Android <span class="note" id="uage"></span></h2><div class="tiles" id="users"></div><p class="note">Appareils qui ont ouvert l'appli (version 1.1 et suivantes), comptés de façon anonyme. Actualisé toutes les 30 secondes. L'appli n'envoie rien tant que la personne n'a pas vu l'information, et peut désactiver le compteur dans les réglages.</p></div>
     <div class="row" id="per" role="group" aria-label="Période"></div>
     <div class="tiles" id="tiles"></div>
     <div class="card"><h2>Visiteurs par jour</h2><div class="bars" id="bars"></div><div class="axis"><span id="a0"></span><span id="a1"></span></div></div>
@@ -80,11 +81,18 @@ function render(j){
   table($('#cc'),group(list,'cc:'),function(c){return esc(c==='XX'?'Inconnu':(CC?CC.of(c):c))});
   table($('#dev'),group(list,'dev:'));
 }
+function loadUsers(){
+  fetch('api/users').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(u){
+    $('#users').innerHTML=[['Dernière heure',u.lastHour],['24 dernières heures',u.last24h],['7 jours',u.week],['30 jours',u.month],['Total depuis la 1.1',u.total]].map(function(t){return '<div class="card tile"><b>'+t[1]+'</b><span>'+t[0]+'</span></div>'}).join('');
+    $('#uage').textContent='· à '+new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  }).catch(function(){$('#users').innerHTML='<p class="note">Compteur indisponible pour le moment.</p>'});
+}
+setInterval(function(){if(!$('#app').hidden)loadUsers()},30000);
 function load(){
   fetch('api/analytics?days='+days,{headers:{Authorization:'Bearer '+token}}).then(function(r){
     if(r.status===401)throw new Error('mdp');if(r.status===503)throw new Error('cfg');if(!r.ok)throw new Error('srv');return r.json()
   }).then(function(j){
-    $('#login').hidden=true;$('#app').hidden=false;render(j);
+    $('#login').hidden=true;$('#app').hidden=false;render(j);loadUsers();
     try{localStorage.setItem('kholle-stats',token)}catch(e){}
   }).catch(function(e){
     $('#app').hidden=true;$('#login').hidden=false;
